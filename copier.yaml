@@ -1,1 +1,20 @@
 _subdirectory: ./template_content
+
+include_readme:
+    type: bool
+    when: false
+    help: Include a default README.md file
+    default: yes
+
+include_algokit_toml:
+    type: bool
+    when: false
+    help: Include a default algokit.toml file
+    default: yes
+
+project_name:
+    type: str
+    help: Name for this project.
+    when: "{{ include_readme }}"
+    placeholder: "algorand-app"
+    default: "myproject"
