@@ -10,17 +10,16 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Install poetry
         run: pipx install poetry
 
       - name: Install algokit
         run: pipx install git+https://github.com/algorandfoundation/algokit-cli@feat/init_wizard_v2 --force
-
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: "poetry"
 
       - name: Configure git
         shell: bash
