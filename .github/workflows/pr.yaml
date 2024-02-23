@@ -1,0 +1,8 @@
+name: Pull Request validation
+
+on: [pull_request]
+
+jobs:
+  pr-check:
+    name: Check Template
+    uses: ./.github/workflows/check-copier.yaml
