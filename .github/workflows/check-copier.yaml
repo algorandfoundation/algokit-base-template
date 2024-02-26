@@ -19,7 +19,7 @@ jobs:
         run: pipx install poetry
 
       - name: Install algokit
-        run: pipx install https://github.com/algorandfoundation/algokit-cli/releases/download/v1.12.0-beta.1/algokit-1.12.0b1-py3-none-any.whl --force
+        run: pipx install algokit
 
       - name: Configure git
         shell: bash
