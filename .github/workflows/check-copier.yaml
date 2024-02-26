@@ -19,7 +19,7 @@ jobs:
         run: pipx install poetry
 
       - name: Install algokit
-        run: pipx install git+https://github.com/algorandfoundation/algokit-cli@feat/init_wizard_v2 --force
+        run: pipx install algokit
 
       - name: Configure git
         shell: bash
