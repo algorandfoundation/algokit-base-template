@@ -1,20 +1,32 @@
 _subdirectory: ./template_content
 
 include_readme:
-    type: bool
-    when: false
-    help: Include a default README.md file
-    default: yes
+  type: bool
+  when: false
+  help: Include a default README.md file
+  default: yes
 
 include_algokit_toml:
-    type: bool
-    when: false
-    help: Include a default algokit.toml file
-    default: yes
+  type: bool
+  when: false
+  help: Include a default algokit.toml file
+  default: yes
+
+include_github_workflow_template:
+  type: bool
+  when: false
+  help: Include a template github workflow for workspace-based projects
+  default: no
+
+include_github_workflow_organizer:
+  type: bool
+  when: false
+  help: Include a template script that takes care of moving your standalone github workflows to root .github/workflows folder
+  default: no
 
 project_name:
-    type: str
-    help: Name for this project.
-    when: "{{ include_readme }}"
-    placeholder: "algorand-app"
-    default: "myproject"
+  type: str
+  help: Name for this project.
+  when: "{{ include_readme }}"
+  placeholder: "algorand-app"
+  default: "myproject"
