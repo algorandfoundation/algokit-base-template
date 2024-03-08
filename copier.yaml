@@ -1,5 +1,10 @@
 _subdirectory: ./template_content
 
+# All of the below are hidden questions without any user interaction.
+# Given that baseline is primarily aimed to be used as part of the invocation of
+# official and custom fullstack, standalone algokit projects, control
+# over the below is recommended via -a flag available in both algokit init and copier directly
+
 include_readme:
   type: bool
   when: false
@@ -18,15 +23,16 @@ include_github_workflow_template:
   help: Include a template github workflow for workspace-based projects
   default: no
 
-include_github_workflow_organizer:
-  type: bool
-  when: false
-  help: Include a template script that takes care of moving your standalone github workflows to root .github/workflows folder
-  default: no
-
 project_name:
   type: str
   help: Name for this project.
   when: "{{ include_readme }}"
   placeholder: "algorand-app"
   default: "myproject"
+
+projects_root_path:
+  type: str
+  help: Name of the directory to host sub projects in the workspace (Defaults to 'projects').
+  when: "{{ include_algokit_toml }}"
+  placeholder: "projects"
+  default: "projects"

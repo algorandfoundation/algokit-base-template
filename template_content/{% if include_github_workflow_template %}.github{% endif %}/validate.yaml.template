@@ -2,6 +2,10 @@ name: Pull Request validation
 
 on: [pull_request]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: false
+
 jobs:
     # Sample of referencing a separate workflow file with workflow_call
     example-ci:
