@@ -26,10 +26,14 @@ The base workspace project structure looks as follows:
 
 To use this template, [install AlgoKit](https://github.com/algorandfoundation/algokit-cli#readme) and then either execute `algokit init`. Any standalone template will auto include the content of this template as a base. To disable this behavior use the `--no-workspace` flag.
 
+### Notes for template builders
+
+Template contains a set of hidden questions that can be altered via explicit `-a` flag in `algokit init` command. Those are useful when base template is part of your copier `_tasks` (see [fullstack](https://github.com/algorandfoundation/algokit-fullstack-template/blob/main/copier.yaml) for reference) invocation and you want to control behavior around optional artifacts that are disabled by default.
+
 ### GitHub Codespaces
 
 If executing this repository in GitHub Codespaces, the container will automatically cleanup templatized content and pre-install `algokit` for you. To get started execute:
 
--   `algokit init` - to invoke interactive wizard to guide you through the process of creating a new AlgoKit project
+- `algokit init` - to invoke interactive wizard to guide you through the process of creating a new AlgoKit project
 
 Powered by [Copier templates](https://copier.readthedocs.io/en/stable/).
