@@ -23,6 +23,12 @@ include_github_workflow_template:
   help: Include a template github workflow for workspace-based projects
   default: no
 
+include_vscode_code_workspace:
+  type: bool
+  help: Include a default VSCode code-workspace
+  when: no
+  default: yes
+
 project_name:
   type: str
   help: Name for this project.
