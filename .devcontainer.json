@@ -15,5 +15,5 @@
     }
   },
   "postCreateCommand": "mkdir -p ~/.config/algokit && pipx install algokit && rm -rf template_content copier.yaml && sudo chown -R codespace:codespace ~/.config/algokit",
-  "postStartCommand": "until algokit localnet status > /dev/null 2>&1; do sleep 5 && algokit localnet reset && sleep 5; done;"
+  "postStartCommand": "until algokit localnet status > /dev/null 2>&1; do algokit localnet reset && sleep 20; done;"
 }
