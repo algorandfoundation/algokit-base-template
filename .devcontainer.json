@@ -15,5 +15,5 @@
     }
   },
   "postCreateCommand": "mkdir -p ~/.config/algokit && pipx install algokit && rm -rf template_content copier.yaml && sudo chown -R codespace:codespace ~/.config/algokit",
-  "postStartCommand": "until docker info > /dev/null 2>&1; do echo 'Docker engine not yet running. Retrying in 5 seconds...' && sleep 5; done; algokit localnet reset"
+  "postStartCommand": "until algokit localnet status > /dev/null 2>&1; do sleep 5 && algokit localnet reset; done;"
 }
