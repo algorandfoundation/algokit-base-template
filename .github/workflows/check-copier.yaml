@@ -31,4 +31,4 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          algokit init --template-url=. --template-url-ref="HEAD" -n test_run --UNSAFE-SECURITY-accept-template-url --no-bootstrap --no-git
+          algokit init --template-url=. --template-url-ref="HEAD" -n test_run --UNSAFE-SECURITY-accept-template-url --no-bootstrap --no-git -a projects_root_path 'projects'
