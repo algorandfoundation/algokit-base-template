@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run template using algokit (no-prompts)",
+      "command": "algokit",
+      "args": [
+        "-v",
+        "init",
+        "--name",
+        "playground",
+        "--no-git",
+        "--defaults",
+        "--UNSAFE-SECURITY-accept-template-url",
+        "--template-url",
+        "${workspaceFolder}",
+        "--template-url-ref",
+        "HEAD",
+        "--no-bootstrap"
+      ],
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["Cleanup playground folder"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Cleanup playground folder",
+      "command": "rm",
+      "args": ["-rf", "playground"],
+      "type": "shell",
+      "windows": {
+        "command": "./.vscode/clear.ps1"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
