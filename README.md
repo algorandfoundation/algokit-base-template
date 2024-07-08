@@ -32,7 +32,7 @@ Template contains a set of hidden questions that can be altered via explicit `-a
 
 ### GitHub Codespaces
 
-If executing this repository in GitHub Codespaces, the container will automatically cleanup templatized content and pre-install `algokit` for you. To get started execute:
+If executing this repository in GitHub Codespaces, execute `algokit generate devcontainer` to create default `.devcontainer.json` file prior to provisioning a codespace instance and commit to version control. Then, after codespace creation, the container will automatically cleanup templatized content and pre-install `algokit` for you. To get started execute:
 
 - `algokit init` - to invoke interactive wizard to guide you through the process of creating a new AlgoKit project
 
